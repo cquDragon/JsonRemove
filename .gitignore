@@ -1,6 +1,3 @@
 .idea/
-phone_business/phone_business.iml
-phone_business/target/
-phone_middware.iml
-phone_service/phone_service.iml
-phone_service/target
+*.iml
+*.target
