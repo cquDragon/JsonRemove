@@ -6,7 +6,7 @@ import com.alibaba.fastjson.JSONObject;
  */
 public class JsonPuter {
 
-    public static void jsonPutter(Object outterObject, String source) {
+    public void jsonPutter(Object outterObject, String source) {
         if (outterObject == null || source == null)
             return;
         if ("".equals(source)) {
@@ -52,7 +52,7 @@ public class JsonPuter {
         JSONObject jsonObject = JSONObject.parseObject("{\"pages\":1,\"obj\":{\"marketingStartTime\":\"11:22:15\",\"id\":{ \"marketingEndTime\":\"22:47:26\",\n" +
                 "            \"state\":\"1\"},\"marketingEndTime\":\"11:24:20\",\"state\":\"1\"},\"count\":10,\"start\":1,\"pageSize\":10,\"end\":10,\"currentPage\":1,\"list\":[{\"marketingStartTime\":\"11:14:39\",\"id\":37,\"marketingEndTime\":\"22:47:26\",\"state\":\"1\"},{\"marketingStartTime\":\"11:22:15\",\"id\":36,\"marketingEndTime\":\"11:24:20\",\"state\":\"1\"}]}");
         System.out.println(jsonObject.toJSONString());
-        jsonPutter(jsonObject, "obj.id");
+        new JsonPuter().jsonPutter(jsonObject, "obj.id");
         System.out.println(jsonObject.toJSONString());
     }
 }
