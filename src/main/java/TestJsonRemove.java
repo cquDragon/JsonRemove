@@ -11,7 +11,7 @@ public class TestJsonRemove {
         System.out.println("before: "+ jsonStr);
         JSONObject object = JSON.parseObject(jsonStr);
         System.out.println(System.currentTimeMillis()+"test_KeepKeys============start");
-        Main.keepKeys(object, key);
+        JSONRemoveUtil.keepKeys(object, key);
         System.out.println(System.currentTimeMillis()+"test_KeepKeys============end");
         System.out.println(object.toJSONString());
         System.out.println();
@@ -25,7 +25,7 @@ public class TestJsonRemove {
         System.out.println("before: "+ jsonStr);
         JSONObject object = JSON.parseObject(jsonStr);
         System.out.println(System.currentTimeMillis()+"test_Delete============start");
-        Main.deleteJsonProperty(object, key);
+        JSONRemoveUtil.deleteJsonProperty(object, key);
         System.out.println(System.currentTimeMillis()+"test_Delete============end");
         System.out.println(object.toJSONString());
         System.out.println();
@@ -39,7 +39,7 @@ public class TestJsonRemove {
         JSONObject object = JSON.parseObject(jsonStr);
         System.out.println(System.currentTimeMillis()+"test_DeleteByStrArry============start");
         for (String str : keyAtrr) {
-            Main.deleteJsonProperty(object, str);
+            JSONRemoveUtil.deleteJsonProperty(object, str);
         }
         System.out.println(System.currentTimeMillis()+"test_DeleteByStrArry============end");
         System.out.println(object.toJSONString());
@@ -53,7 +53,7 @@ public class TestJsonRemove {
         System.out.println("before: "+ jsonStr);
         JSONObject object = JSON.parseObject(jsonStr);
         System.out.println("test_KeepByGivenTreeSet_start============"+System.currentTimeMillis());
-        Main.keepKeysByGivenKeySet(keySet,object);
+        JSONRemoveUtil.keepKeysByGivenKeySet(keySet,object);
         System.out.println("test_KeepByGivenTreeSet_end============"+System.currentTimeMillis());
         System.out.println(object.toJSONString());
 
