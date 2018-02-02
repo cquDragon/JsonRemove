@@ -107,8 +107,7 @@ public class JSONRemoveUtil {
 
     public static void main(String[] args) {
         TreeSet<String> set = new TreeSet<String>();
-        set.add("obj.belong,businessId,onlineDeployList");
-        set.add("obj,businessId");
+        set.add("obj.resourceId,belong,businessId,onlineDeployList");
         set.add("obj.onlineDeployList.jumpUrl,auditor,displayContent");
 
 

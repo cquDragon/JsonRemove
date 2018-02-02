@@ -1,5 +1,6 @@
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.serializer.SerializerFeature;
 
 import java.util.TreeSet;
 
@@ -13,7 +14,7 @@ public class TestJsonRemove {
         System.out.println(System.currentTimeMillis()+"test_KeepKeys============start");
         JSONRemoveUtil.keepKeys(object, key);
         System.out.println(System.currentTimeMillis()+"test_KeepKeys============end");
-        System.out.println(object.toJSONString());
+        System.out.println(JSONObject.toJSONString(object, SerializerFeature.WriteMapNullValue));
         System.out.println();
         System.out.println();
         System.out.println();
@@ -55,7 +56,7 @@ public class TestJsonRemove {
         System.out.println("test_KeepByGivenTreeSet_start============"+System.currentTimeMillis());
         JSONRemoveUtil.keepKeysByGivenKeySet(keySet,object);
         System.out.println("test_KeepByGivenTreeSet_end============"+System.currentTimeMillis());
-        System.out.println(object.toJSONString());
+        System.out.println(JSONObject.toJSONString(object,SerializerFeature.WriteMapNullValue));
 
         System.out.println();
         System.out.println();
